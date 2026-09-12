@@ -1,0 +1,35 @@
+# Local OpenCode configuration and dependencies.
+.opencode/
+opencode.json
+
+# Generated packages and build output.
+dist/
+build/
+
+# Node and editor artifacts.
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment files and credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets.json
+credentials.json
+
+# OS and temporary files.
+*.tmp
+*.temp
+*.bak

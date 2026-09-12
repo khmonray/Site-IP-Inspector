@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Site IP Inspector",
+  "version": "1.0.0",
+  "description": "Shows the IPv4/IPv6 address (via Google Public DNS) and public metadata (country, city, ISP, timezone) of the site in the active tab.",
+  "action": {
+    "default_title": "Inspect site IP",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

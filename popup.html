@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site IP Inspector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__header">
+        <h1 class="card__title">Site IP Inspector</h1>
+        <p class="card__subtitle" id="site-hostname">&mdash;</p>
+      </header>
+
+      <section class="status" id="status" role="status" aria-live="polite" aria-atomic="true">
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="status-text">Reading the active tab&hellip;</span>
+      </section>
+
+      <section id="consent" hidden>
+        <p class="note">Send the hostname above to Google Public DNS and one public IP to ipwho.is? Both providers see your source IP. Known local/special-use names are blocked, but unknown corporate names cannot be detected reliably. Do not continue for a confidential hostname.</p>
+        <button class="button" id="confirm" type="button">Look up public website</button>
+      </section>
+      <section class="result" id="result" hidden>
+        <dl class="facts">
+          <div class="fact">
+            <dt>Hostname</dt>
+            <dd class="mono" id="fact-hostname">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Public IPv4</dt>
+            <dd class="mono" id="fact-ipv4">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Public IPv6</dt>
+            <dd class="mono" id="fact-ipv6">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Country</dt>
+            <dd id="fact-country">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Region</dt>
+            <dd id="fact-region">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>City</dt>
+            <dd id="fact-city">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>ISP</dt>
+            <dd id="fact-isp">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>ASN</dt>
+            <dd class="mono" id="fact-asn">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Timezone</dt>
+            <dd id="fact-timezone">&mdash;</dd>
+          </div>
+        </dl>
+        <p class="note" id="address-note" hidden></p>
+        <p class="note note--live" id="metadata-note" role="status" aria-live="polite" hidden></p>
+        <p class="note note--source" id="source-note">
+          Addresses come from Google Public DNS, not from your browser&rsquo;s actual
+          connection. A VPN, proxy, or system/corporate DNS can make these results
+          differ.
+        </p>
+      </section>
+
+      <section
+        class="error"
+        id="error"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        hidden
+      >
+        <p class="error__text" id="error-text"></p>
+        <button class="button" id="retry" type="button">Try again</button>
+      </section>
+
+      <footer class="card__footer">
+        <span>Providers: Google Public DNS &middot; ipwho.is</span>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
