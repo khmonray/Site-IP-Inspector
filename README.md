@@ -25,6 +25,7 @@ a blank popup.
 | File | Purpose |
 | --- | --- |
 | `manifest.json` | Manifest V3 definition and permissions. |
+| `icon-16.png`, `icon-32.png`, `icon-48.png`, `icon-128.png` | Chrome extension icons generated from the source artwork. |
 | `popup.html` | Popup markup (loading / result / error sections). |
 | `popup.css` | Small, dependency-free, light/dark aware styles. |
 | `popup.js` | Active-tab lookup, DNS resolution, IP classification, metadata lookup, rendering. |
@@ -37,7 +38,7 @@ a blank popup.
 1. Open `chrome://extensions` in Chrome (or any Chromium browser).
 2. Enable **Developer mode** (top-right toggle).
 3. Click **Load unpacked** and select the unpacked project folder that contains
-   `manifest.json` and `icon.jpg`.
+   `manifest.json` and the icon PNG files.
 4. Pin the **Site IP Inspector** extension to the toolbar (puzzle-piece menu).
 
 ## Test
