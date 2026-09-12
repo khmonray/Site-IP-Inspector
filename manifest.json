@@ -3,9 +3,19 @@
   "name": "Site IP Inspector",
   "version": "1.0.0",
   "description": "Shows the IPv4/IPv6 address (via Google Public DNS) and public metadata (country, city, ISP, timezone) of the site in the active tab.",
+  "icons": {
+    "16": "icon.jpg",
+    "32": "icon.jpg",
+    "48": "icon.jpg",
+    "128": "icon.jpg"
+  },
   "action": {
     "default_title": "Inspect site IP",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.jpg",
+      "32": "icon.jpg"
+    }
   },
   "permissions": [
     "activeTab"

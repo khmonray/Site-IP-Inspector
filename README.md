@@ -36,8 +36,8 @@ a blank popup.
 
 1. Open `chrome://extensions` in Chrome (or any Chromium browser).
 2. Enable **Developer mode** (top-right toggle).
-3. Click **Load unpacked** and select this project folder
-   (`vpn_plugin`, the folder that contains `manifest.json`).
+3. Click **Load unpacked** and select the unpacked project folder that contains
+   `manifest.json` and `icon.jpg`.
 4. Pin the **Site IP Inspector** extension to the toolbar (puzzle-piece menu).
 
 ## Test
